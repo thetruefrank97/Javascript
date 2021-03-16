@@ -25,8 +25,6 @@ class ComprasPendientes extends Tarea {
     mostrar() {
         return `La compra de ${this.nombre} tiene una prioridad ${this.prioridad} y se deben comprar ${this.cantidad} de estos objetos`
     }
-
-
 }
 
 //Crear los objetos
