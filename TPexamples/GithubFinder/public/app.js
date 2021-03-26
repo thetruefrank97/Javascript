@@ -10,15 +10,16 @@ searchUser === null || searchUser === void 0 ? void 0 : searchUser.addEventListe
     if (userText !== "") {
         github.getUser(userText)
             .then(data => {
-            if (data.profile.message === "Not Found") {
-                //show alert
-                ui.showAlert("User not found", "alert alert-danger");
-            }
-            else {
-                //Show profile
-                ui.showProfile(data.profile);
-            }
-        });
+                if (data.profile.message === "Not Found") {
+                    //show alert
+                    ui.showAlert("User not found", "alert alert-danger");
+                }
+                else {
+                    //Show profile
+                    ui.showProfile(data.profile);
+                    ui.showRepos(data.repos);
+                }
+            });
     }
     else {
         //Clear profile
